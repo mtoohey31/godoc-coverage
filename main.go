@@ -46,10 +46,28 @@ func main() {
 					errorf("%v: missing type doc for %s\n",
 						fset.Position(t.Decl.Pos()), t.Name)
 				}
+				for _, c := range t.Consts {
+					if c.Doc == "" {
+						errorf("%v: missing const doc for %s\n",
+							fset.Position(c.Decl.Pos()), c.Names[0])
+					}
+				}
+				for _, v := range t.Vars {
+					if v.Doc == "" {
+						errorf("%v: missing var doc for %s\n",
+							fset.Position(v.Decl.Pos()), v.Names[0])
+					}
+				}
 				for _, m := range t.Methods {
 					if m.Doc == "" {
 						errorf("%v: missing method doc for %s\n",
 							fset.Position(m.Decl.Pos()), m.Name)
+					}
+				}
+				for _, f := range t.Funcs {
+					if f.Doc == "" {
+						errorf("%v: missing func doc for %s\n",
+							fset.Position(f.Decl.Pos()), f.Name)
 					}
 				}
 			}
