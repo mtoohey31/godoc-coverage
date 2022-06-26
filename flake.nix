@@ -29,7 +29,7 @@
           name = "godoc-coverage";
           pname = name;
           src = ./.;
-          vendorSha256 = "pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=";
+          vendorSha256 = "JGgHvUZujxehR9EfH3qw8yBOvjaPC++TA3OkSJrUscY=";
         };
 
         devShells.default = mkShell { packages = [ go_1_18 gopls gow ]; };

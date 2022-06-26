@@ -1,0 +1,10 @@
+github.com/barweiss/go-tuple v1.0.2 h1:RFUKJf8BaALDgX4WIS1fgmAeEFLQo9h+n/QrbIQrdSo=
+github.com/barweiss/go-tuple v1.0.2/go.mod h1:oX3AtZyuGnCuK3B4PlUIfR9spxyJ42bgTSqCI9GkPB0=
+github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
+github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
+golang.org/x/exp v0.0.0-20220314205449-43aec2f8a4e7 h1:jynE66seADJbyWMUdeOyVTvPtBZt7L6LJHupGwxPZRM=
+golang.org/x/exp v0.0.0-20220314205449-43aec2f8a4e7/go.mod h1:lgLbSvA5ygNOMpwM/9anMpWVlVJ7Z+cHWq/eFuinpGE=
+gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c h1:dUUwHk2QECo/6vqA44rthZ8ie2QXMNeKRTHCNY2nXvo=
+mtoohey.com/iter v1.0.0 h1:8L8nqLAoiHdZp50EvPVne2s6m4PZl7bbxpRn9LLkga8=
+mtoohey.com/iter v1.0.0/go.mod h1:Iuu446ydpvZmtlJyea7UNyneMKS609ff3+uLY7J+GmE=
