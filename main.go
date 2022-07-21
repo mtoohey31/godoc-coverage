@@ -27,7 +27,7 @@ func main() {
 		// if the package fails to parse, return a single-element iterator containing
 		// the error
 		if err != nil {
-			iter.Elems([]string{err.Error()})
+			return iter.Elems([]string{err.Error()})
 		}
 
 		// flat map each package found in the path to an iterator of errors
@@ -53,18 +53,18 @@ func main() {
 				return iter.Map(valueDocs.Filter(func(vd *doc.Value) bool {
 					return vd.Doc == ""
 				}), func(vd *doc.Value) string {
-					return fmt.Sprintf("%v: missing doc for %s\n",
+					return fmt.Sprintf("%v: missing doc for %s",
 						fset.Position(vd.Decl.Pos()), vd.Names[0])
 				}).Chain(iter.Map(funcDocs.Filter(func(fd *doc.Func) bool {
 					return fd.Doc == ""
 				}), func(fd *doc.Func) string {
-					return fmt.Sprintf("%v: missing doc for %s\n",
+					return fmt.Sprintf("%v: missing doc for %s",
 						fset.Position(fd.Decl.Pos()), fd.Name)
 				}))
 			})
 	}).Inspect(func(s string) {
 		// print all errors to stderr
-		os.Stderr.WriteString(s)
+		fmt.Fprintln(os.Stderr, s)
 		// errors are ignored, cause what else are we going to do about them, spit
 		// them into the same stderr that the write just failed on?
 	}).Count() > 0 {
